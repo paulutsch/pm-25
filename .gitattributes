@@ -1,0 +1,4 @@
+*.ipynb filter=strip-notebook-output
+
+[filter "strip-notebook-output"]
+clean = "jupyter nbconvert --clear-output --stdin --stdout --log-level=ERROR" 
