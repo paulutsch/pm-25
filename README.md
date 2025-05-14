@@ -47,3 +47,11 @@ python tuning.py --config config.yaml
 2. the checkpoints of tuning (see directory outputs)
 3. the config you used (see the file used_config)
 4. wandb logs
+
+
+**to evaluate with the lm-harness suite**
+1. set parameters in eval-config.yaml
+2. run
+```bash
+python eval-script.py --config eval-config.yaml
+```
