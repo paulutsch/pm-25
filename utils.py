@@ -1,5 +1,4 @@
 import os
-import wandb
 
 def formatting_func(examples):
     messages = examples["messages"]
@@ -9,8 +8,10 @@ def formatting_func(examples):
     ]
     return {"text": texts}
 
-def run_wandb(model_name, dataset_name, max_steps, lr, batch_size, grad_acc_steps):
-    wandb.login(key=os.getenv["WANDB_API_KEY"])
+def run_wandb(model_name, dataset_name, max_steps, lr, batch_size, grad_acc_steps, save_dir):
+    os.environ["WANDB_DIR"] = save_dir
+    import wandb
+    wandb.login(key=os.getenv("WANDB_API_KEY"))
     wandb.init(
     project="pm-pt",
     name=f"{model_name}_{dataset_name}",
