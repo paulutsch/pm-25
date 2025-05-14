@@ -5,17 +5,17 @@ base_model:
 
 dataset:
   name: allenai/tulu-3-sft-personas-math-grade
-  # name: "allenai/tulu-3-sft-personas-math"
-  # name: "allenai/tulu-3-sft-personas-instruction-following"
-  # name: "allenai/tulu-3-sft-personas-algebra"
-  # name: "allenai/tulu-3-sft-personas-code"
+  # name: allenai/tulu-3-sft-personas-math
+  # name: allenai/tulu-3-sft-personas-instruction-following
+  # name: allenai/tulu-3-sft-personas-algebra
+  # name: allenai/tulu-3-sft-personas-code
   # name: allenai/llama-3.1-tulu-3-8b-preference-mixture
   # name: allenai/llama-3.1-tulu-3-70b-preference-mixture
   # name: allenai/llama-3.1-tulu-3-405b-preference-mixture
 
 train_type:
   type: sft
-  # type: "dpo"
+  # type: dpo
 
 lm_eval_tasks:
   - "hellaswag"
