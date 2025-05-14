@@ -3,6 +3,7 @@ import argparse
 from unsloth import FastLanguageModel
 from transformers import BitsAndBytesConfig
 from trl import SFTTrainer, SFTConfig, DPOTrainer, DPOConfig
+from trl.trainer.utils import SIMPLE_CHAT_TEMPLATE
 import torch
 from datasets import load_dataset
 import json
@@ -134,7 +135,7 @@ else: #if tuning == dpo
 
     # this is the original base model
     ref_model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name=base_model_name,
+        model_name=sft_model_name,
         max_seq_length=2048,
         dtype=None,
         load_in_4bit=True,
@@ -148,7 +149,8 @@ else: #if tuning == dpo
         load_in_4bit=True,
     )
 
-    tokenizer.chat_template = """<s>[INST] {{ user }} [/INST] {{ assistant }}</s>"""
+    if tokenizer.chat_template is None:
+        tokenizer.chat_template = SIMPLE_CHAT_TEMPLATE
 
     # don't want to train the reference model
     for param in ref_model.parameters():
