@@ -26,8 +26,8 @@ export WANDB_API_KEY=your key
 
 **to start sft tuning**:
 1. set parameters in config.yaml
-*Note: the first tuning parameter must be set as sft*
-*Note2: set base_model you want to tune and sft_dataset for tuning*
+- *Note: the first tuning parameter must be set as sft*
+- *Note2: set base_model you want to tune and sft_dataset for tuning*
 2. run
 ```bash
 python tuning.py --config config.yaml
@@ -35,8 +35,8 @@ python tuning.py --config config.yaml
 
 **to start dpo tuning**:
 1. set parameters in config.yaml
-*Note: the first tuning parameter must be set as dpo*
-*Note2: set base_model (it will function as a reference model during dpo-tuning), sft_model you want to tune (the size of base_model and sft_model should match, for example, 1B in both cases) and preference_dataset for tuninng*
+- *Note: the first tuning parameter must be set as dpo*
+- *Note2: set base_model (it will function as a reference model during dpo-tuning), sft_model you want to tune (the size of base_model and sft_model should match, for example, 1B in both cases) and preference_dataset for tuninng*
 2. run
 ```bash
 python tuning.py --config config.yaml
@@ -47,5 +47,3 @@ python tuning.py --config config.yaml
 2. the checkpoints of tuning (see directory outputs)
 3. the config you used (see the file used_config)
 4. wandb logs
-
-
