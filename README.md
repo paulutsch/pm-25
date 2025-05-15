@@ -55,3 +55,10 @@ python tuning.py --config config.yaml
 ```bash
 python eval-script.py --config eval-config.yaml
 ```
+
+**to view evaluation results**
+1. run
+```bash
+python analyze_results.py --path /path/to/results.json
+```
+(add ```--plot``` to generate and save plotted accuracies)
