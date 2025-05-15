@@ -18,21 +18,19 @@ with open(args.config, "r") as f:
 
 model_name = config["base_model"]["name"].split("/")[-1]
 dataset_name = config["dataset"]["name"].split("/")[-1]
-train_type = config["train_type"]["type"]
 tasks = config["lm_eval_tasks"]
 limit = config["limit"]
 use_accelerate = config["use_accelerate"]
 batch_size = config["batch_size"]
 device = config["device"]
-output_path = config["output_path"]
 peft_path = f"{model_name.split('/')[-1]}_finetuned_{dataset_name.split('/')[-1]}"
 
 os.environ["HF_ALLOW_CODE_EVAL"] = "1"
 
 shutil.copy(args.config, peft_path)
 
-if not os.path.exists(output_path):
-    os.makedirs(output_path)
+'''if not os.path.exists(output_path):
+    os.makedirs(output_path)'''
 
 
 tasks_str = ",".join(tasks)
@@ -44,7 +42,7 @@ base_args = [
     #"--confirm_run_unsafe_code",
     "--device", device,
     "--batch_size", batch_size,
-    "--output_path", output_path
+    "--output_path", peft_path
 ]
 
 if limit is not None:
