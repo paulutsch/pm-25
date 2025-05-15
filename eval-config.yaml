@@ -13,10 +13,6 @@ dataset:
   # name: allenai/llama-3.1-tulu-3-70b-preference-mixture
   # name: allenai/llama-3.1-tulu-3-405b-preference-mixture
 
-train_type:
-  type: sft
-  # type: dpo
-
 lm_eval_tasks:
   - "hellaswag"
   - "gsm8k"
@@ -34,4 +30,4 @@ limit: null
 
 use_accelerate: true
 
-output_path: "eval_results"
+#output_path: "eval_results"
