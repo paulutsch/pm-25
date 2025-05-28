@@ -1,0 +1,72 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Let's play a guessing game. Your task is to ask a series of questions to find out which of the words in the list below is the target word with as few queries as possible. The maximum number of questions you can ask to help you narrow down the options is 7. Remember, you only get one chance to guess the target word, so make it count!\\ \tt \\ \tt The rules of the game are: \\ \tt \\ \tt 1. Only ask one question per turn. DO NOT ASK MORE THAN ONE QUESTION.\\ \tt \\ \tt 2. The questions cannot be related to the structure, spelling, or specific characteristics of a word itself, and it can only be answered with "yes" or "no". \\ \tt \\ \tt 3. Use the following format for asking questions and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt QUESTION: <your question>\\ \tt \\ \tt 4. You have only one opportunity to guess the target word. To make your guess, use the following format and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt GUESS: <target word>\\ \tt \\ \tt Remember you cannot ask for a hint. Make your question brief. Let’s start!\\ \tt \\ \tt List of candidate words: ['Heroin', 'Cocaine', 'Valium', 'Xanax', 'Measles', 'Flu', 'Polio', 'Tuberculosis'] 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 The optimal approach involves narrowing down the list through strategic yes/no questions that split the candidate words into manageable groups. Here’s how it breaks down:\\ \tt \\ \tt 1. **First Question:** Determine if the target is among common illicit drugs (Heroin, Cocaine, Valium, Xanax).\\ \tt    \\ \tt    - If "yes," narrow down to these four.\\ \tt    - If "no," focus on viral diseases or Tuberculosis.\\ \tt \\ \tt 2. **If the answer is yes:**\\ \tt    - **Second Question:** Check if the target is Heroin or Cocaine.\\ \tt      - "Yes" narrows it to these two, with further questions determining which.\\ \tt      - "No" indicates Valium or Xanax.\\ \tt    \\ \tt 3. **For Heroin and Cocaine:**\\ \tt    - **Third Question:** Does the word contain 'h'? \\ \tt      - "Yes" identifies Heroin.\\ \tt      - "No" means Cocaine.\\ \tt \\ \tt 4. **For Valium and Xanax:**\\ \tt    - **Fourth Question:** Check for the letter 'x'.\\ \tt      - "Yes" is Xanax; otherwise, it's Valium.\\ \tt \\ \tt 5. **If the answer to the first question was no:**\\ \tt    - The target is among Measles, Flu, Polio, or Tuberculosis.\\ \tt    \\ \tt 6. **Second Question:** Determine if the disease is viral.\\ \tt      - Viral diseases narrow down to Measles, Flu, or Polio.\\ \tt \\ \tt 7. **Third Question:** For remaining candidates (Measles, Flu, Polio):\\ \tt    - Does it start with 'M'?\\ \tt      - "Yes" identifies Measles.\\ \tt      - Else, determine between Flu and Polio.\\ \tt \\ \tt 8. **For Tuberculosis:**\\ \tt    - It’s identified by elimination after the previous steps.\\ \tt \\ \tt **Final Guess:** Based on the accumulated information, the target word is revealed.\\ \tt \\ \tt GUESS: Heroin 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Invalid format. Guesser must use the form 'QUESTION: ' or 'GUESS: '. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort game 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

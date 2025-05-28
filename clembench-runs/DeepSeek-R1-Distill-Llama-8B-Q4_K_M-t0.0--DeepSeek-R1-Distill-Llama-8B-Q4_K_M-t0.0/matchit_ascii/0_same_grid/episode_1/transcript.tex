@@ -1,0 +1,84 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt X X X X X 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 To determine if the grids match, let's compare key elements step-by-step:\\ \tt \\ \tt 1. **Grid Structure**: \\ \tt    - Your grid has 5 rows and 5 columns.\\ \tt    - The first four rows each have five symbols: [X, X, X, X] in Columns 3 only.\\ \tt \\ \tt 2. **Row Comparison**:\\ \tt    - **Row1-4**: In my grid, these rows have the same pattern with an X in Column3 and ▢ elsewhere.\\ \tt    - If your grid's first four rows don't have this X in Column3 or differ otherwise, they may not match.\\ \tt \\ \tt 3. **Fifth Row Analysis**:\\ \tt    - My fifth row is all Xs (5 Xs).\\ \tt    - If your fifth row doesn't match this exactly, the grids are different.\\ \tt \\ \tt 4. **Column Analysis**:\\ \tt    - **Columns1-2 and 4-5**: In my grid, these columns have ▢ in rows1-4 and X in row5.\\ \tt    - If any of these don't align in your grid, there's a mismatch.\\ \tt    - **Column3**: Entirely X across all rows in my grid.\\ \tt \\ \tt **Questions to Ask the Other Person**:\\ \tt \\ \tt - Can you confirm the number of rows and columns in your grid?\\ \tt - Does each of the first four rows have an X only in the third column, with ▢ elsewhere?\\ \tt - Is the fifth row entirely composed of Xs?\\ \tt - In Columns1,2,4,5: Are the elements ▢ in the first four rows and X in the fifth row?\\ \tt - Does Column3 have Xs in all five rows?\\ \tt \\ \tt By addressing these points, we can identify if our grids are the same or different. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort, first word: To 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Aborted 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Aborted 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

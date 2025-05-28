@@ -1,0 +1,72 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Let's play a guessing game. Your task is to ask a series of questions to find out which of the words in the list below is the target word with as few queries as possible. The maximum number of questions you can ask to help you narrow down the options is 7. Remember, you only get one chance to guess the target word, so make it count!\\ \tt \\ \tt The rules of the game are: \\ \tt \\ \tt 1. Only ask one question per turn. DO NOT ASK MORE THAN ONE QUESTION.\\ \tt \\ \tt 2. The questions cannot be related to the structure, spelling, or specific characteristics of a word itself, and it can only be answered with "yes" or "no". \\ \tt \\ \tt 3. Use the following format for asking questions and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt QUESTION: <your question>\\ \tt \\ \tt 4. You have only one opportunity to guess the target word. To make your guess, use the following format and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt GUESS: <target word>\\ \tt \\ \tt Remember you cannot ask for a hint. Make your question brief. Let’s start!\\ \tt \\ \tt List of candidate words: ['dictatorship', 'monarchy', 'oligarchy', 'autocracy', 'democrat', 'republican', 'fascism', 'democracy'] 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 To narrow down the target word effectively within seven yes/no questions, follow this structured approach:\\ \tt \\ \tt 1. **Does the word end with "ism"?**\\ \tt    - If Yes: **GUESS: fascism**\\ \tt    - If No:\\ \tt      Proceed to determine among the remaining words.\\ \tt \\ \tt 2. **Does the word contain "dict"? (Dictatorship)**\\ \tt    - If Yes: **GUESS: dictatorship**\\ \tt    - If No:\\ \tt      Check for other characteristics.\\ \tt \\ \tt 3. **Does the word end with "cracy"? (Autocracy, Monarchy, Oligarchy, Democracy)**\\ \tt    - If Yes: Next question to narrow down further.\\ \tt    - If No: Continue identifying.\\ \tt \\ \tt 4. **If the word ends with "arcy": Does it contain "olig"? (Oligarchy or Monarchy)**\\ \tt    - If Yes: **GUESS: oligarchy**\\ \tt    - If No: **GUESS: monarchy**\\ \tt \\ \tt 5. **If not ending with "ism" or containing "dict", "cracy", or needing to check for oligraphy: Does it contain "demo"? (Democracy, Democrat)**\\ \tt    - If Yes: Next question to differentiate.\\ \tt    - If No:\\ \tt      Proceed to guess.\\ \tt \\ \tt 6. **Does the word contain "repub"? (Republican vs. Democrat/Democracy)**\\ \tt    - If Yes: **GUESS: republican**\\ \tt    - If No: **GUESS: democracy**\\ \tt \\ \tt This approach ensures that within seven questions, you can deduce or narrow down sufficiently to make an informed guess.\\ \tt \\ \tt However, upon review, it's evident that with the given word list and the specified rules, a better strategy might be:\\ \tt \\ \tt 1. Does the word contain "demo"? (Democracy, Democrat)\\ \tt    - If Yes: Next question to differentiate between democracy and democrat.\\ \tt 2. Does the word contain "repub"? (Republican)\\ \tt    - If Yes: **GUESS: republican**\\ \tt    - If No: **GUESS: democracy**\\ \tt \\ \tt Thus, it can be deduced within two questions if starting with the right query.\\ \tt \\ \tt **Final Approach:**\\ \tt \\ \tt 1. **Does the word contain "demo"?** (Democracy or Democrat)\\ \tt    - Yes:\\ \tt      2. **Does the word contain "repub"?** (If yes → Republican; else → Democracy)\\ \tt        - If Yes → Republican\\ \tt        - If No → Democracy\\ \tt    - No:\\ \tt      Proceed to eliminate other options through subsequent questions.\\ \tt \\ \tt But adhering strictly, the optimal sequence within seven questions and one guess is:\\ \tt \\ \tt 1. Ends with "ism"?\\ \tt    - Yes: Guess fascism.\\ \tt 2. Else, contains "dict".\\ \tt    - Yes: Guess dictatorship.\\ \tt 3. Else, ends with "cracy".\\ \tt 4. Else, check for oligraphy or monarchy.\\ \tt 5. Else, contains "demo".\\ \tt 6. Then determine between democracy and democrat.\\ \tt \\ \tt But to streamline:\\ \tt \\ \tt **Final Questions and Guess:**\\ \tt \\ \tt 1. Does the word contain "demo"?\\ \tt    - Yes:\\ \tt      2. Does it contain "repub"? → Republican\\ \tt      3. If no, guess Democracy.\\ \tt    - No:\\ \tt      Proceed to check for fascism, dictatorship, autocracy, or monarchy.\\ \tt \\ \tt However, considering all possibilities within seven questions and one guess, the most efficient sequence would likely involve starting with checking for "demo" first, then confirming between republic and democracy.\\ \tt \\ \tt But since it's a guessing game without hints, perhaps the optimal approach is:\\ \tt \\ \tt **Question 1:** Does the word contain "demo"? (Democracy/Democrat)\\ \tt - If Yes:\\ \tt   **Question 2:** Does the word contain "repub"? → Republican\\ \tt   - Yes: GUESS: republican\\ \tt   - No: GUESS: democracy\\ \tt - If No:\\ \tt   Proceed to check other characteristics.\\ \tt \\ \tt But since only one guess is allowed, perhaps starting with the most likely differentiator.\\ \tt \\ \tt However, to ensure compliance and given that I might have overcomplicated, the concise approach would be:\\ \tt \\ \tt **Final Answer:**\\ \tt \\ \tt GUESS: democracy 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Invalid format. Guesser must use the form 'QUESTION: ' or 'GUESS: '. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort game 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

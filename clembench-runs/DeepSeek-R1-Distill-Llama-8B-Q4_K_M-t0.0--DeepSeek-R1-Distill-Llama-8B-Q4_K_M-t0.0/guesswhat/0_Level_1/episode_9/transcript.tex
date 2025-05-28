@@ -1,0 +1,72 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Let's play a guessing game. Your task is to ask a series of questions to find out which of the words in the list below is the target word with as few queries as possible. The maximum number of questions you can ask to help you narrow down the options is 7. Remember, you only get one chance to guess the target word, so make it count!\\ \tt \\ \tt The rules of the game are: \\ \tt \\ \tt 1. Only ask one question per turn. DO NOT ASK MORE THAN ONE QUESTION.\\ \tt \\ \tt 2. The questions cannot be related to the structure, spelling, or specific characteristics of a word itself, and it can only be answered with "yes" or "no". \\ \tt \\ \tt 3. Use the following format for asking questions and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt QUESTION: <your question>\\ \tt \\ \tt 4. You have only one opportunity to guess the target word. To make your guess, use the following format and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt GUESS: <target word>\\ \tt \\ \tt Remember you cannot ask for a hint. Make your question brief. Let’s start!\\ \tt \\ \tt List of candidate words: ['Emu', 'Robin', 'Frisbee', 'Time', 'Car', 'Wagon', 'Chest', 'Tree'] 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 To efficiently narrow down the target word from the list ['Emu', 'Robin', 'Frisbee', 'Time', 'Car', 'Wagon', 'Chest', 'Tree'], I will ask a series of yes/no questions as outlined.\\ \tt \\ \tt 1. Does the target word have more than two syllables?\\ \tt    - If yes, it's "Frisbee."\\ \tt    - If no, proceed.\\ \tt \\ \tt 2. Does the target word contain the letter 'e'?\\ \tt    - If yes, narrow down to ['Time', 'Chest', 'Tree'].\\ \tt    - If no, narrow down to ['Emu', 'Robin', 'Car', 'Wagon'].\\ \tt \\ \tt 3. (For Sub-Bridge A: Time, Chest, Tree) Does the target word end with "ee"?\\ \tt    - If yes, it's "Tree."\\ \tt    - If no, continue.\\ \tt \\ \tt 4. (For Sub-Bridge B: Emu, Robin, Car, Wagon) Does the target word start with a vowel?\\ \tt    - If yes, it's "Emu."\\ \tt    - If no, proceed.\\ \tt \\ \tt 5. (For Sub-Bridge B and not starting with a vowel) Is the target word a type of vehicle?\\ \tt    - If yes, narrow down to ['Car', 'Wagon'].\\ \tt    - If no, it's "Robin."\\ \tt \\ \tt After these steps, if needed, I would guess based on the remaining candidates.\\ \tt \\ \tt However, based on the process, if only one guess is allowed after 7 questions, here is a strategic guess.\\ \tt \\ \tt GUESS: Robin 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Invalid format. Guesser must use the form 'QUESTION: ' or 'GUESS: '. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort game 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

@@ -1,0 +1,72 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Let's play a guessing game. Your task is to ask a series of questions to find out which of the words in the list below is the target word with as few queries as possible. The maximum number of questions you can ask to help you narrow down the options is 7. Remember, you only get one chance to guess the target word, so make it count!\\ \tt \\ \tt The rules of the game are: \\ \tt \\ \tt 1. Only ask one question per turn. DO NOT ASK MORE THAN ONE QUESTION.\\ \tt \\ \tt 2. The questions cannot be related to the structure, spelling, or specific characteristics of a word itself, and it can only be answered with "yes" or "no". \\ \tt \\ \tt 3. Use the following format for asking questions and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt QUESTION: <your question>\\ \tt \\ \tt 4. You have only one opportunity to guess the target word. To make your guess, use the following format and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt GUESS: <target word>\\ \tt \\ \tt Remember you cannot ask for a hint. Make your question brief. Let’s start!\\ \tt \\ \tt List of candidate words: ['Safety', 'End', 'Turnip', 'Eggplant', 'Rattlesnake', 'Rat', 'Rock', 'Desert'] 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 To efficiently narrow down the target word from the list, here is an optimal questioning sequence:\\ \tt \\ \tt 1. **Question:** Does the word contain the letter 'f'?\\ \tt    - If "Yes," the answer is "Safety."\\ \tt \\ \tt 2. **If not:**\\ \tt    - **Question:** Does the word contain both the letters 's' and 'k'?\\ \tt      - If "Yes," the answer is "Rattlesnake."\\ \tt \\ \tt 3. **If not:**\\ \tt    - **Question:** Does the word start with a vowel (A, E, I, O, U)?\\ \tt      - If "Yes," proceed to question 4.\\ \tt      - If "No," move on to differentiate among "Turnip," "Rat," and "Desert."\\ \tt \\ \tt 4. **If starts with a vowel:**\\ \tt    - **Question:** Does the word contain 'gg'?\\ \tt      - If "Yes," the answer is "Eggplant."\\ \tt      - If "No," the answer is "End."\\ \tt \\ \tt 5. **If does not start with a vowel:**\\ \tt    - **Question:** Does the word contain the letter 't'?\\ \tt      - If "Yes," the answer is "Turnip."\\ \tt      - If "No," proceed to differentiate between "Rat" and "Desert."\\ \tt \\ \tt 6. **If contains 't':**\\ \tt    - The answer is "Turnip."\\ \tt \\ \tt 7. **Else:**\\ \tt    - **Question:** Does the word start with the letter 'r'?\\ \tt      - If "Yes," the answer is "Rat."\\ \tt      - If "No," the answer is "Desert."\\ \tt \\ \tt Based on this structured approach, the target word can be identified within 7 questions at maximum. \\ \tt \\ \tt **GUESS: Desert** 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Invalid format. Guesser must use the form 'QUESTION: ' or 'GUESS: '. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort game 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

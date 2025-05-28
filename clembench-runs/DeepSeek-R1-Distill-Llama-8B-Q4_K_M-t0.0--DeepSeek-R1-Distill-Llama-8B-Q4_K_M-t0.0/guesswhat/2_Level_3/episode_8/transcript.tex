@@ -1,0 +1,72 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Let's play a guessing game. Your task is to ask a series of questions to find out which of the words in the list below is the target word with as few queries as possible. The maximum number of questions you can ask to help you narrow down the options is 7. Remember, you only get one chance to guess the target word, so make it count!\\ \tt \\ \tt The rules of the game are: \\ \tt \\ \tt 1. Only ask one question per turn. DO NOT ASK MORE THAN ONE QUESTION.\\ \tt \\ \tt 2. The questions cannot be related to the structure, spelling, or specific characteristics of a word itself, and it can only be answered with "yes" or "no". \\ \tt \\ \tt 3. Use the following format for asking questions and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt QUESTION: <your question>\\ \tt \\ \tt 4. You have only one opportunity to guess the target word. To make your guess, use the following format and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt GUESS: <target word>\\ \tt \\ \tt Remember you cannot ask for a hint. Make your question brief. Let’s start!\\ \tt \\ \tt List of candidate words: ['Pot', 'Pan', 'Cup', 'Spoon', 'Whisk', 'Blender', 'Bowl', 'Ladle'] 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 After carefully analyzing and planning, here is a step-by-step approach to guess the target word efficiently.\\ \tt \\ \tt 1. **First Question**: Determine if the word has a handle.\\ \tt    - If yes, proceed with Pot, Pan, Spoon, Whisk, or Ladle.\\ \tt    - If no, narrow down to Cup or Bowl.\\ \tt \\ \tt 2. **Second Question (if first answer is YES)**: Check if the word ends with 'n'.\\ \tt    - A 'yes' narrows it down to Pan or Spoon.\\ \tt    - A 'no' leaves Pot, Whisk, or Ladle.\\ \tt \\ \tt 3. **Third Question (if second answer is YES)**: Identify if the second letter sounds like 'a' for Pan or Spoon.\\ \tt    - If yes→ guess Pan.\\ \tt    - If no→ guess Spoon.\\ \tt \\ \tt 4. **Fourth Question (if second answer is NO)**: Determine if the word starts with 'W'.\\ \tt    - A 'yes' points to Whisk.\\ \tt    - A 'no' means it's Ladle.\\ \tt \\ \tt 5. **Second Question (if first answer is NO)**: Check if the word starts with 'C'.\\ \tt    - A 'yes' leads to Cup.\\ \tt    - A 'no' means the target is Bowl.\\ \tt \\ \tt Following this structured approach ensures minimal questions and efficient narrowing down of the target word.\\ \tt \\ \tt ---\\ \tt \\ \tt **Final Guessing Strategy:**\\ \tt \\ \tt 1. **QUESTION:** Does the word have a handle?\\ \tt 2a. If YES:\\ \tt    i. **QUESTION:** Does it end with 'n'?\\ \tt       A. Yes→ \\ \tt          i. **QUESTION:** Does the second letter sound like 'a'?\\ \tt              1. Yes→ GUESS Pan\\ \tt              2. No→ GUESS Spoon\\ \tt       B. No→ \\ \tt          i. **QUESTION:** Does the word start with 'W'?\\ \tt              1. Yes→ GUESS Whisk\\ \tt              2. No→ GUESS Ladle\\ \tt 2b. If NO:\\ \tt    i. **QUESTION:** Does it start with 'C'?\\ \tt       A. Yes→ GUESS Cup\\ \tt       B. No→ GUESS Bowl\\ \tt \\ \tt ---\\ \tt \\ \tt This method ensures we efficiently narrow down the target word within the allowed number of questions, adhering to the rules and maximizing the chances of an accurate guess. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Invalid format. Guesser must use the form 'QUESTION: ' or 'GUESS: '. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort game 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

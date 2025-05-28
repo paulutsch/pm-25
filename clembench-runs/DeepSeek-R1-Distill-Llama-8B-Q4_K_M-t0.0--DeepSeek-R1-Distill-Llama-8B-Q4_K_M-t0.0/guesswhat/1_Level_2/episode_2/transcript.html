@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <style>
+        /* This CSS is an adaptation from the answer by Roko C. Buljan in https://stackoverflow.com/a/71155446 */ 
+
+* {margin: 0; box-sizing: border-box;}
+
+body {background-color: rgb(157, 152, 150);}
+
+  /* dialogue header */
+
+.top-info {
+  text-align: center;
+  --rad: 20px;
+  --rad-sm: 3px;
+  font: 20px/1.5 sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background: #3f3e3e;
+  color: #fff;
+}
+
+.chat {
+    --rad: 20px;
+    --rad-sm: 3px;
+    font: 16px/1.5 sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+  }
+  
+  .msg {
+    position: relative;
+    max-width: 75%;
+    padding: 7px 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* 5 levels, two players to/from game master and meta messages form game master */
+
+  .msg.b-gm {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #874aaf;
+    color: #fff;
+    margin-left: 60%;
+  }
+
+  .msg.a-gm {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #f39109;
+    color: #fff;
+    margin-right: 60%;
+  }
+  
+  .msg.gm-a {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #c4c3c3;    
+    color: #0c0c0c;
+    margin-right: 40%;
+    margin-left: 20%;
+  }
+
+  .msg.gm-b {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #c4c3c3;
+    color: #0c0c0c;
+    margin-right: 20%;
+    margin-left: 40%;
+  }
+
+  .msg.gm-gm {
+    background: #f1f1f1;
+    color: #373636;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 0.8rem;
+
+  }
+  
+  /* speaker labels */
+  
+  .msg::before {
+    content: attr(speaker);
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 100%;
+    color: #888;
+    white-space: nowrap;
+
+  }
+  
+  .msg.b-gm::before {
+    right: 15px;
+  }
+
+  .msg.gm-a::before {
+    right: 15px;
+  }
+
+  .msg.a-gm::before {
+    left: 15px;
+  }
+
+  .msg.gm-b::before {
+    left: 15px;
+  }
+
+  .msg.gm-gm::before {
+    left: 0px;
+  }
+  
+
+    </style>
+</head>
+<body>
+
+<br/>
+
+<div class="top-info">
+    <p>Interaction Transcript for Level_2, episode 2 with DeepSeek-R1-Distill-Llama-8B-Q4_K_M-t0.0--DeepSeek-R1-Distill-Llama-8B-Q4_K_M-t0.0.</p>
+</div>
+
+<br/>
+
+<div class="chat">
+
+    <div speaker="GM (Game Master) to Player 1 (Guesser)" class="msg gm-a" style="">
+        <p>Let&#x27;s play a guessing game. Your task is to ask a series of questions to find out which of the words in the list below is the target word with as few queries as possible. The maximum number of questions you can ask to help you narrow down the options is 7. Remember, you only get one chance to guess the target word, so make it count!<br/><br/>The rules of the game are: <br/><br/>1. Only ask one question per turn. DO NOT ASK MORE THAN ONE QUESTION.<br/><br/>2. The questions cannot be related to the structure, spelling, or specific characteristics of a word itself, and it can only be answered with &quot;yes&quot; or &quot;no&quot;. <br/><br/>3. Use the following format for asking questions and DO NOT ADD ANY TEXT OTHER THAN THIS: <br/><br/>QUESTION: &lt;your question&gt;<br/><br/>4. You have only one opportunity to guess the target word. To make your guess, use the following format and DO NOT ADD ANY TEXT OTHER THAN THIS: <br/><br/>GUESS: &lt;target word&gt;<br/><br/>Remember you cannot ask for a hint. Make your question brief. Let’s start!<br/><br/>List of candidate words: [&#x27;Pearl&#x27;, &#x27;Diamond&#x27;, &#x27;Turquoise&#x27;, &#x27;Opal&#x27;, &#x27;Rumba&#x27;, &#x27;Jig&#x27;, &#x27;Two-step&#x27;, &#x27;Cha-cha&#x27;]</p>
+    </div>
+
+    <div speaker="Player 1 (Guesser) to GM (Game Master)" class="msg a-gm" style="">
+        <p>Let&#x27;s start with the first question to determine if the target word is a dance or a gemstone. Based on your answer, we&#x27;ll have separate lines of questioning to narrow it down further.<br/><br/>1. QUESTION: Is the target word a type of dance?<br/>   - If yes, proceed to Dance category.<br/>   - If no, proceed to Gemstones category.<br/><br/>Let&#x27;s assume the first answer was &quot;Yes,&quot; so we&#x27;re dealing with a dance.<br/><br/>2. QUESTION: Does the target dance contain the letter &#x27;R&#x27;?<br/><br/>- If yes, guess Rumba (GUESS: Rumba).<br/>- If no, move to narrowing it down between Jig, Two-step, or Cha-cha.<br/><br/>3. QUESTION (if needed): Does the target dance contain the letter &#x27;i&#x27;?<br/>   - If yes, guess Jig (GUESS: Jig).<br/>   - If no, determine if it&#x27;s Two-step or Cha-cha.<br/><br/>4. QUESTION (if needed): Does the target dance start with the letter &#x27;T&#x27;?<br/>   - If yes, guess Two-step (GUESS: Two-step).<br/>   - If no, guess Cha-cha (GUESS: Cha-cha).<br/><br/>If the first answer was &quot;No&quot; to question 1, we&#x27;re dealing with a gemstone.<br/><br/>2. QUESTION: Does the target gemstone start with the letter &#x27;D&#x27;?<br/><br/>- If yes, guess Diamond (GUESS: Diamond).<br/>- If no, move to narrowing it down between Pearl, Turquoise, or Opal.<br/><br/>3. QUESTION (if needed): Does the target gemstone start with the letter &#x27;P&#x27;?<br/>   - If yes, guess Pearl (GUESS: Pearl).<br/>   - If no, determine if it&#x27;s Turquoise or Opal.<br/><br/>4. QUESTION (if needed): Does the target gemstone contain two &#x27;u&#x27;s?<br/><br/>- If yes, guess Turquoise (GUESS: Turquoise).<br/>- If no, guess Opal (GUESS: Opal).<br/><br/>By following this structured approach, we can efficiently narrow down to the target word within 7 questions.</p>
+    </div>
+
+    <div speaker="Game Master: invalid format" class="msg gm-gm" style="">
+        <p>Invalid format. Guesser must use the form &#x27;QUESTION: &#x27; or &#x27;GUESS: &#x27;.</p>
+    </div>
+
+    <div speaker="Game Master: invalid format" class="msg gm-gm" style="">
+        <p>abort game</p>
+    </div>
+
+</div>
+
+</body>
+</html>

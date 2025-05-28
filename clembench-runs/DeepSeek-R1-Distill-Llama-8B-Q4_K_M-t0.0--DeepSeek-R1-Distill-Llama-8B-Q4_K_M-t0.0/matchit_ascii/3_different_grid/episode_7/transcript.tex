@@ -1,0 +1,120 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ X X ▢ ▢\\ \tt X X X X X\\ \tt ▢ X X ▢ ▢\\ \tt ▢ ▢ X ▢ ▢ 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 DESCRIPTION:\\ \tt The grid is a 5x5 arrangement with specific filled (X) cells. Each row and column has a particular pattern:\\ \tt \\ \tt - **Row 1**: X in the third cell; others empty.\\ \tt - **Row 2**: X's in second and third cells.\\ \tt - **Row 3**: All five cells are filled (X).\\ \tt - **Row 4**: Same as Row 2.\\ \tt - **Row 5**: Same as Row 1.\\ \tt \\ \tt **Columns:**\\ \tt - Column 1: Only the middle row (Row 3) is filled.\\ \tt - Column 2: Filled in Rows 2, 3, and 4.\\ \tt - Column 3: All rows are filled.\\ \tt - Column 4 and 5: Only Row 3 is filled.\\ \tt \\ \tt The grid exhibits vertical symmetry around Column 3 and reflectional symmetry along both horizontal and vertical axes. It also has full column and row filling in specific areas.\\ \tt \\ \tt **Symmetry Check:**\\ \tt - **Vertical:** Each column mirrors its counterpart on the opposite side of Column 3.\\ \tt - **Horizontal:** Rows above and below mirror each other in filled cells.\\ \tt \\ \tt To determine similarity, key points to verify:\\ \tt 1. All of Row 3 is filled (X).\\ \tt 2. Column 3 entirely filled.\\ \tt 3. Presence of two adjacent X's in Rows 2 and 4.\\ \tt 4. Symmetry as described.\\ \tt \\ \tt If these features match your grid, they are likely the same. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt X ▢ ▢ ▢ X\\ \tt X X ▢ X X\\ \tt X ▢ X ▢ X\\ \tt X ▢ ▢ ▢ X\\ \tt X ▢ ▢ ▢ X 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 The grid in question is a 5x5 arrangement where the first and last rows and columns are entirely filled with 'X's. The internal cells exhibit symmetry along both horizontal and vertical axes. Rows 1 and 5, as well as columns 1 and 5, are identical. This suggests that the grid has reflectional symmetry across both the horizontal and vertical midlines. Additionally, there is an 'X' at the center position (3,3). The internal cells in rows 2 and 4 have 'X's, while most other positions contain '○'.\\ \tt \\ \tt DESCRIPTION: The grid is a 5x5 square with all bordering cells marked 'X'. It exhibits both horizontal and vertical symmetry, with symmetrical placement of 'X' and '○' cells. The center cell is 'X', and there are additional internal 'X's in rows 2 and 4, creating a symmetrical pattern within the framework of bordering 'X's. 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort, first word: The 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Aborted 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Aborted 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

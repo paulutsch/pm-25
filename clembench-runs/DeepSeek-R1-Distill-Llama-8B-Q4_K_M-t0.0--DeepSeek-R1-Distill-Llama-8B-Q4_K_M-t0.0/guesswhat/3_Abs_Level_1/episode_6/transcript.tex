@@ -1,0 +1,72 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Let's play a guessing game. Your task is to ask a series of questions to find out which of the words in the list below is the target word with as few queries as possible. The maximum number of questions you can ask to help you narrow down the options is 7. Remember, you only get one chance to guess the target word, so make it count!\\ \tt \\ \tt The rules of the game are: \\ \tt \\ \tt 1. Only ask one question per turn. DO NOT ASK MORE THAN ONE QUESTION.\\ \tt \\ \tt 2. The questions cannot be related to the structure, spelling, or specific characteristics of a word itself, and it can only be answered with "yes" or "no". \\ \tt \\ \tt 3. Use the following format for asking questions and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt QUESTION: <your question>\\ \tt \\ \tt 4. You have only one opportunity to guess the target word. To make your guess, use the following format and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt GUESS: <target word>\\ \tt \\ \tt Remember you cannot ask for a hint. Make your question brief. Let’s start!\\ \tt \\ \tt List of candidate words: ['delighted', 'interested', 'wound', 'damage', 'law', 'art', 'craft', 'classical'] 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 To effectively narrow down the target word within seven questions, I'll proceed step-by-step, focusing on unique characteristics first.\\ \tt \\ \tt 1. **Is the target word related to classical music or literature?**\\ \tt    - Yes → GUESS: classical\\ \tt    - No → Proceed\\ \tt \\ \tt 2. **If not, is the target word related to legal systems (law)?**\\ \tt    - Yes → GUESS: law\\ \tt    - No → Proceed\\ \tt \\ \tt 3. **Is the target word a positive emotion (delighted or interested)?**\\ \tt    - Yes → \\ \tt      4. **Does it end with 'ed'?** \\ \tt        - Yes → GUESS: delighted\\ \tt        - No → GUESS: interested\\ \tt    - No → Proceed\\ \tt \\ \tt 4. **If not, is the target word related to physical harm (wound or damage)?**\\ \tt    - Yes → \\ \tt      5. **Does it end with a vowel (e for damage or d for wound)?**\\ \tt        - Ends with 'e' → GUESS: damage\\ \tt        - Ends with 'd' → GUESS: wound\\ \tt    - No → Proceed\\ \tt \\ \tt 5. **If the target is not related to harm, check if it's 'craft'.**\\ \tt    - Yes → GUESS: craft\\ \tt    - No → Proceed\\ \tt \\ \tt 6. **Finally, check if it's 'art'.**\\ \tt    - If still unsure, GUESS: art\\ \tt \\ \tt This structured approach ensures minimal questions while maximizing information gain.\\ \tt \\ \tt GUESS: classical 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Invalid format. Guesser must use the form 'QUESTION: ' or 'GUESS: '. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort game 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

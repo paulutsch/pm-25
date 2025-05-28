@@ -1,0 +1,216 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with >. Only reply with an action.\\ \tt For example:\\ \tt > open cupboard\\ \tt \\ \tt You can have up to two objects in your inventory at the same time.\\ \tt \\ \tt Your goal for this game is: Put the book on the table, the plate on the table and the mop on the table.\\ \tt \\ \tt Once you have achieved your goal, write "> done" to end the game.\\ \tt \\ \tt You are in a bedroom now. There are a wardrobe, a bed and a pillow. The wardrobe is closed. The pillow is on the bed. There is a passage to a hallway here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > open wardrobe 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Round: 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'open', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['open', 'wardrobe1']], 'effective_epistemic_gain_amount': 1, 'known_entities': [['at', 'player1', 'bedroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['bedroom1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The wardrobe is now open. The wardrobe is empty. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go hallway 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Round: 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'pottedplant1', 'hallway1'], ['on', 'pottedplant1', 'hallway1floor1'], ['exit', 'hallway1', 'broomcloset1'], ['exit', 'hallway1', 'bedroom1'], ['exit', 'hallway1', 'kitchen1'], ['at', 'player1', 'hallway1']], 'effective_epistemic_gain_amount': 6, 'known_entities': [['at', 'pottedplant1', 'hallway1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'player1', 'hallway1']], 'known_entities_ratio': 0.1724137931034483, 'visited_rooms': ['bedroom1', 'hallway1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a hallway now. There is a potted plant. The potted plant is on the floor. There are passages to a broom closet, a bedroom and a kitchen here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 The player is in the hallway, looking around. The potted plant lies on the floor, blocking their path slightly. There are three passages: one leading to a broom closet, another to a bedroom, and a third to a kitchen.\\ \tt \\ \tt 1. **Objective**: Retrieve the book from the second bedroom, the plate from the kitchen, and the mop from the broom closet, then place all three items on the table.\\ \tt \\ \tt 2. **Inventory Limit**: Can carry up to two objects at any time.\\ \tt \\ \tt **Step-by-Step Plan:**\\ \tt \\ \tt 1. **Open the broom closet** via the hallway passage. Retrieve the mop.\\ \tt    - Action: > open broom closet\\ \tt    - Result: The mop is now in your inventory.\\ \tt \\ \tt 2. **Move towards the kitchen**: Use the hallway passage leading to the kitchen.\\ \tt    - Action: > go kitchen\\ \tt \\ \tt 3. **Retrieve the plate from the kitchen**:\\ \tt    - Look around for the plate.\\ \tt    - Once found, take it.\\ \tt    - Action: > take plate\\ \tt \\ \tt 4. **Proceed to the second bedroom** via the hallway passage leading to another bedroom.\\ \tt    - Action: > go bedroom\\ \tt \\ \tt 5. **Retrieve the book from the bedroom**:\\ \tt    - Look around for the book.\\ \tt    - Once found, take it.\\ \tt    - Action: > take book\\ \tt \\ \tt 6. **Now, have all three items: mop, plate, and book**.\\ \tt \\ \tt 7. **Place all items on the table** when possible.\\ \tt    - Action: > put book table\\ \tt    - Then, > put plate table\\ \tt    - Then, > put mop table\\ \tt \\ \tt 8. **Once all items are on the table**: Declare game completion.\\ \tt    - > done\\ \tt \\ \tt This plan methodically addresses each objective while managing inventory constraints and navigating through potential locations effectively. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Round: 2 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 The player is in the hallway, looking around. The potted plant lies on the floor, blocking their path slightly. There are three passages: one leading to a broom closet, another to a bedroom, and a third to a kitchen.\\ \tt \\ \tt 1. **Objective**: Retrieve the book from the second bedroom, the plate from the kitchen, and the mop from the broom closet, then place all three items on the table.\\ \tt \\ \tt 2. **Inventory Limit**: Can carry up to two objects at any time.\\ \tt \\ \tt **Step-by-Step Plan:**\\ \tt \\ \tt 1. **Open the broom closet** via the hallway passage. Retrieve the mop.\\ \tt    - Action: > open broom closet\\ \tt    - Result: The mop is now in your inventory.\\ \tt \\ \tt 2. **Move towards the kitchen**: Use the hallway passage leading to the kitchen.\\ \tt    - Action: > go kitchen\\ \tt \\ \tt 3. **Retrieve the plate from the kitchen**:\\ \tt    - Look around for the plate.\\ \tt    - Once found, take it.\\ \tt    - Action: > take plate\\ \tt \\ \tt 4. **Proceed to the second bedroom** via the hallway passage leading to another bedroom.\\ \tt    - Action: > go bedroom\\ \tt \\ \tt 5. **Retrieve the book from the bedroom**:\\ \tt    - Look around for the book.\\ \tt    - Once found, take it.\\ \tt    - Action: > take book\\ \tt \\ \tt 6. **Now, have all three items: mop, plate, and book**.\\ \tt \\ \tt 7. **Place all items on the table** when possible.\\ \tt    - Action: > put book table\\ \tt    - Then, > put plate table\\ \tt    - Then, > put mop table\\ \tt \\ \tt 8. **Once all items are on the table**: Declare game completion.\\ \tt    - > done\\ \tt \\ \tt This plan methodically addresses each objective while managing inventory constraints and navigating through potential locations effectively. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 command_tag_missing 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'game_successfully_finished': False} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

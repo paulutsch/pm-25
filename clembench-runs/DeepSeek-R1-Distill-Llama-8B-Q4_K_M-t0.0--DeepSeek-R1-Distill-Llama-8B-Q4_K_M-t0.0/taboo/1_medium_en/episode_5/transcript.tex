@@ -1,0 +1,168 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are playing a collaborative word guessing game in which you have to describe a target word for another player to guess.\\ \tt \\ \tt Rules:\\ \tt (a) You have to reply in the form: CLUE: <some text>. Guesses from the other player will start with GUESS.\\ \tt (b) You cannot use the target word itself, parts or morphological variants of it in your description.\\ \tt (c) In addition, the same rules apply for related words which are provided below.\\ \tt \\ \tt End conditions:\\ \tt (i) If you use the target word or a related word in your description, then you lose.\\ \tt (ii) If the other player can guess the target word in 3 tries, you both win.\\ \tt \\ \tt Let us start.\\ \tt \\ \tt This is the target word that you need to describe and that the other player needs to guess:\\ \tt \\ \tt chapel\\ \tt \\ \tt Related words are:\\ \tt \\ \tt - praying\\ \tt - worshipping\\ \tt - meditation\\ \tt \\ \tt Important: You are under time pressure, give short descriptions that are to the point! 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: A small building used by religious groups for gatherings and meetings. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 a small building used by religious groups for gatherings and meetings 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are playing a collaborative word guessing game in which you have to guess a target word that another player describes to you.\\ \tt \\ \tt You can make one guess at each trial. You win when you guess the target word. You lose when you cannot guess it in 3 tries.\\ \tt \\ \tt After each trial you will get a new hint from the other player which starts with CLUE.\\ \tt \\ \tt Make your guesses by just saying the word using the following form: GUESS: <a word>\\ \tt \\ \tt Let us start.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 CLUE: A small building used by religious groups for gatherings and meetings. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: CHURCH 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 church 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 GUESS: CHURCH 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 The target word is "chapel," and the user's guess was "church." \\ \tt \\ \tt - **Understanding the Target Word:** Chapel refers specifically to a smaller building used by religious groups for gatherings and meetings, similar in function to a church but typically smaller.\\ \tt \\ \tt - **User's Guess:** The user guessed "church," which is closely related but more general. While chapel and church are connected, "chapel" is often a specific term referring to a smaller place of worship within or separate from a larger church building.\\ \tt \\ \tt - **Rules and Considerations:**\\ \tt   - **No Use of Target Word or Related Words:** The rules specify that using the target word itself or any related words like "praying," "worshipping," or "meditation" could lead to disqualification. While "church" is related, it's not exactly a synonym for "chapel."\\ \tt   \\ \tt   - **Three Tries Rule:** Since the user made one guess ("church"), they didn't reach the three-tries threshold needed for both players to win.\\ \tt \\ \tt - **Conclusion:** The user's guess of "church" is logical given the context but doesn't meet the criteria for a successful game end. To avoid disqualification, further clues or guesses would need to align more closely with "chapel" without referencing its related terms. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort game 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

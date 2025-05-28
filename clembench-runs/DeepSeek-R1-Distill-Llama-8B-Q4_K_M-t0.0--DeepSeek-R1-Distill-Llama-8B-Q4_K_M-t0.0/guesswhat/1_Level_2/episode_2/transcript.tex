@@ -1,0 +1,72 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Let's play a guessing game. Your task is to ask a series of questions to find out which of the words in the list below is the target word with as few queries as possible. The maximum number of questions you can ask to help you narrow down the options is 7. Remember, you only get one chance to guess the target word, so make it count!\\ \tt \\ \tt The rules of the game are: \\ \tt \\ \tt 1. Only ask one question per turn. DO NOT ASK MORE THAN ONE QUESTION.\\ \tt \\ \tt 2. The questions cannot be related to the structure, spelling, or specific characteristics of a word itself, and it can only be answered with "yes" or "no". \\ \tt \\ \tt 3. Use the following format for asking questions and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt QUESTION: <your question>\\ \tt \\ \tt 4. You have only one opportunity to guess the target word. To make your guess, use the following format and DO NOT ADD ANY TEXT OTHER THAN THIS: \\ \tt \\ \tt GUESS: <target word>\\ \tt \\ \tt Remember you cannot ask for a hint. Make your question brief. Let’s start!\\ \tt \\ \tt List of candidate words: ['Pearl', 'Diamond', 'Turquoise', 'Opal', 'Rumba', 'Jig', 'Two-step', 'Cha-cha'] 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 Let's start with the first question to determine if the target word is a dance or a gemstone. Based on your answer, we'll have separate lines of questioning to narrow it down further.\\ \tt \\ \tt 1. QUESTION: Is the target word a type of dance?\\ \tt    - If yes, proceed to Dance category.\\ \tt    - If no, proceed to Gemstones category.\\ \tt \\ \tt Let's assume the first answer was "Yes," so we're dealing with a dance.\\ \tt \\ \tt 2. QUESTION: Does the target dance contain the letter 'R'?\\ \tt \\ \tt - If yes, guess Rumba (GUESS: Rumba).\\ \tt - If no, move to narrowing it down between Jig, Two-step, or Cha-cha.\\ \tt \\ \tt 3. QUESTION (if needed): Does the target dance contain the letter 'i'?\\ \tt    - If yes, guess Jig (GUESS: Jig).\\ \tt    - If no, determine if it's Two-step or Cha-cha.\\ \tt \\ \tt 4. QUESTION (if needed): Does the target dance start with the letter 'T'?\\ \tt    - If yes, guess Two-step (GUESS: Two-step).\\ \tt    - If no, guess Cha-cha (GUESS: Cha-cha).\\ \tt \\ \tt If the first answer was "No" to question 1, we're dealing with a gemstone.\\ \tt \\ \tt 2. QUESTION: Does the target gemstone start with the letter 'D'?\\ \tt \\ \tt - If yes, guess Diamond (GUESS: Diamond).\\ \tt - If no, move to narrowing it down between Pearl, Turquoise, or Opal.\\ \tt \\ \tt 3. QUESTION (if needed): Does the target gemstone start with the letter 'P'?\\ \tt    - If yes, guess Pearl (GUESS: Pearl).\\ \tt    - If no, determine if it's Turquoise or Opal.\\ \tt \\ \tt 4. QUESTION (if needed): Does the target gemstone contain two 'u's?\\ \tt \\ \tt - If yes, guess Turquoise (GUESS: Turquoise).\\ \tt - If no, guess Opal (GUESS: Opal).\\ \tt \\ \tt By following this structured approach, we can efficiently narrow down to the target word within 7 questions. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Invalid format. Guesser must use the form 'QUESTION: ' or 'GUESS: '. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort game 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}
