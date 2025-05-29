@@ -133,11 +133,11 @@ body {background-color: rgb(157, 152, 150);}
 
 <div class="chat">
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with &gt;. Only reply with an action.<br/>For example:<br/>&gt; open cupboard<br/><br/>You can have up to two objects in your inventory at the same time.<br/><br/>Your goal for this game is: Put the book on the table, the plate on the table and the mop on the table.<br/><br/>Once you have achieved your goal, write &quot;&gt; done&quot; to end the game.<br/><br/>You are in a bedroom now. There are a wardrobe, a bed and a pillow. The wardrobe is closed. The pillow is on the bed. There is a passage to a hallway here.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>&gt; open wardrobe</p>
     </div>
 
@@ -153,11 +153,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>The wardrobe is now open. The wardrobe is empty.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>&gt; go hallway</p>
     </div>
 
@@ -173,11 +173,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You are in a hallway now. There is a potted plant. The potted plant is on the floor. There are passages to a broom closet, a bedroom and a kitchen here.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>The player is in the hallway, looking around. The potted plant lies on the floor, blocking their path slightly. There are three passages: one leading to a broom closet, another to a bedroom, and a third to a kitchen.<br/><br/>1. **Objective**: Retrieve the book from the second bedroom, the plate from the kitchen, and the mop from the broom closet, then place all three items on the table.<br/><br/>2. **Inventory Limit**: Can carry up to two objects at any time.<br/><br/>**Step-by-Step Plan:**<br/><br/>1. **Open the broom closet** via the hallway passage. Retrieve the mop.<br/>   - Action: &gt; open broom closet<br/>   - Result: The mop is now in your inventory.<br/><br/>2. **Move towards the kitchen**: Use the hallway passage leading to the kitchen.<br/>   - Action: &gt; go kitchen<br/><br/>3. **Retrieve the plate from the kitchen**:<br/>   - Look around for the plate.<br/>   - Once found, take it.<br/>   - Action: &gt; take plate<br/><br/>4. **Proceed to the second bedroom** via the hallway passage leading to another bedroom.<br/>   - Action: &gt; go bedroom<br/><br/>5. **Retrieve the book from the bedroom**:<br/>   - Look around for the book.<br/>   - Once found, take it.<br/>   - Action: &gt; take book<br/><br/>6. **Now, have all three items: mop, plate, and book**.<br/><br/>7. **Place all items on the table** when possible.<br/>   - Action: &gt; put book table<br/>   - Then, &gt; put plate table<br/>   - Then, &gt; put mop table<br/><br/>8. **Once all items are on the table**: Declare game completion.<br/>   - &gt; done<br/><br/>This plan methodically addresses each objective while managing inventory constraints and navigating through potential locations effectively.</p>
     </div>
 

@@ -133,11 +133,11 @@ body {background-color: rgb(157, 152, 150);}
 
 <div class="chat">
 
-    <div speaker="GM (Game Master) to Player 1 (PathGuesser)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>Please help me with the following task. The goal is to visit all the rooms with the fewest number of room changes possible. In each room, you need to decide the direction to go in. Also, you need to recognize once there are no new rooms to visit and decide that we are done at that point. Please give your answer in the following format: To move to a neighboring room, use &quot;GO: DIRECTION&quot; and replace DIRECTION with one of [north, south, east, west]. To stop the exploration, answer with &quot;DONE&quot; instead. Omit any other text.<br/>Here is an example:<br/>You are in the Kitchen. Currently available directions: south, west. What is your next command?<br/>GO: west<br/>You have made a step and entered a Lobby. Currently available directions: east, north. What is your next command?<br/>GO: north<br/>...<br/>You have made a step and entered a Bedroom. Currently available directions: south. What is your next command?<br/>DONE<br/>Let us start. You are in the Exercise room. Currently available directions: west, east, north. What is your next command?</p>
     </div>
 
-    <div speaker="Player 1 (PathGuesser) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>GO: west</p>
     </div>
 
@@ -145,11 +145,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>GO: west</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 2 (PathDescriber)" class="msg gm-b" style="">
+    <div speaker="Game Master to Player 2" class="msg gm-b" style="">
         <p>GO: west</p>
     </div>
 
-    <div speaker="Player 2 (PathDescriber) to GM (Game Master)" class="msg b-gm" style="">
+    <div speaker="Player 2 to Game Master" class="msg b-gm" style="">
         <p>You have made a step and entered Balcony. Currently available directions: east, north. What is your next command?</p>
     </div>
 
@@ -161,11 +161,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>{&quot;old&quot;: &quot;Exercise room&quot;, &quot;new&quot;: &quot;Balcony&quot;}</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 1 (PathGuesser)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You have made a step and entered Balcony. Currently available directions: east, north. What is your next command?</p>
     </div>
 
-    <div speaker="Player 1 (PathGuesser) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>GO: east</p>
     </div>
 
@@ -173,11 +173,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>GO: east</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 2 (PathDescriber)" class="msg gm-b" style="">
+    <div speaker="Game Master to Player 2" class="msg gm-b" style="">
         <p>GO: east</p>
     </div>
 
-    <div speaker="Player 2 (PathDescriber) to GM (Game Master)" class="msg b-gm" style="">
+    <div speaker="Player 2 to Game Master" class="msg b-gm" style="">
         <p>You have made a step and entered Exercise room. Currently available directions: west, east, north. What is your next command?</p>
     </div>
 
@@ -189,11 +189,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>{&quot;old&quot;: &quot;Balcony&quot;, &quot;new&quot;: &quot;Exercise room&quot;}</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 1 (PathGuesser)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You have made a step and entered Exercise room. Currently available directions: west, east, north. What is your next command?</p>
     </div>
 
-    <div speaker="Player 1 (PathGuesser) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>To proceed effectively, here&#x27;s a structured approach based on the thought process:<br/><br/>1. **Start in Exercise Room**: Begin by recognizing the current room and available directions (west, east, north).<br/><br/>2. **First Move**: Choose to move west towards Balcony.<br/><br/>3. **Balcony Exploration**:<br/>   - Upon arrival in Balcony, note the available directions (east, north).<br/>   - To avoid looping back to Exercise Room via east, choose to go north instead.<br/><br/>4. **New Room Exploration**: After moving north from Balcony into a new room, explore each available direction methodically:<br/>   - From the new room, determine if any unvisited rooms can be accessed.<br/>   - If multiple directions are available, prioritize those leading to new rooms over those that might loop back.<br/>   <br/>5. **Track Visited Rooms**: Keep a mental list of visited rooms to avoid revisiting them and ensure exploration of all possible paths.<br/><br/>6. **Recognize Completion**: Stop when all possible moves from the current room lead either to already visited rooms or no longer provide access to new rooms.<br/><br/>**Step-by-Step Commands**:<br/><br/>1. From Exercise Room: GO: west<br/>2. In Balcony: GO: north (assuming this leads to a new, unvisited room)<br/>3. Continue exploring each direction in the new room, following the same principles until no new rooms can be accessed.<br/>4. Once all possibilities are exhausted and no new rooms are found, respond with DONE.<br/><br/>This method ensures that you explore all reachable rooms with minimal changes, efficiently navigating through each available direction without unnecessary loops or revisits.</p>
     </div>
 

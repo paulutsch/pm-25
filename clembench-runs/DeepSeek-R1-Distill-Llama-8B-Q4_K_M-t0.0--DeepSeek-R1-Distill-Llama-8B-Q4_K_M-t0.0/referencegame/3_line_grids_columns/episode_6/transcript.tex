@@ -1,0 +1,96 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are given three grids, where each of them is 5 by 5 in size.\\ \tt Grids have empty cells marked with "▢" and filled cells marked with "X".\\ \tt Your task is to generate a referring expression that best describes the target grid while distinguishing it from the two other distractor grids.\\ \tt The first grid is the target grid, and the following two grids are the distractors.\\ \tt \\ \tt Target grid:\\ \tt \\ \tt X □ X X X\\ \tt X □ X X X\\ \tt X □ X X X\\ \tt X □ X X X\\ \tt X □ X X X\\ \tt \\ \tt Distractor grid 1:\\ \tt \\ \tt □ X X X X\\ \tt □ X X X X\\ \tt □ X X X X\\ \tt □ X X X X\\ \tt □ X X X X\\ \tt \\ \tt Distractor grid 2:\\ \tt \\ \tt X X □ X X\\ \tt X X □ X X\\ \tt X X □ X X\\ \tt X X □ X X\\ \tt X X □ X X\\ \tt \\ \tt Instruction: Describe the target grid.\\ \tt Generate the referring expression starting with the tag "Expression: " for the given target grid. Omit any other text. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 Expression: The target grid has all cells in the first column filled with "X", all cells in the second column empty ("□"), and all cells in the third, fourth, and fifth columns filled with "X". 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Expression: The target grid has all cells in the first column filled with "X", all cells in the second column empty ("□"), and all cells in the third, fourth, and fifth columns filled with "X". 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are given three grids, where each of them is 5 by 5 in size.\\ \tt Grids have empty cells marked with "▢" and filled cells marked with "X".\\ \tt You are also given a referring expression that describes one of the given grids.\\ \tt Your task is to select the grid that matches the given referring expression.\\ \tt Generate only the number (in text) of the grid that matches the given expression by selecting first, second, or third.\\ \tt \\ \tt First:\\ \tt \\ \tt X □ X X X\\ \tt X □ X X X\\ \tt X □ X X X\\ \tt X □ X X X\\ \tt X □ X X X\\ \tt \\ \tt Second:\\ \tt \\ \tt □ X X X X\\ \tt □ X X X X\\ \tt □ X X X X\\ \tt □ X X X X\\ \tt □ X X X X\\ \tt \\ \tt Third:\\ \tt \\ \tt X X □ X X\\ \tt X X □ X X\\ \tt X X □ X X\\ \tt X X □ X X\\ \tt X X □ X X\\ \tt \\ \tt Expression: The target grid has all cells in the first column filled with "X", all cells in the second column empty ("□"), and all cells in the third, fourth, and fifth columns filled with "X".\\ \tt Question: Which grid does the expression refer to?\\ \tt Start with the tag "Answer: ", followed by your selection. Omit any other text.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 The referring expression specifies that in the target grid, the first column should be entirely "X", the second column should be entirely "□", and columns three to five should also be entirely "X". \\ \tt \\ \tt Examining each grid:\\ \tt \\ \tt - **Grid 1**: First column is all "X", second column is all "□", and the remaining columns are all "X".\\ \tt - **Grid 2**: First column is all "□", which does not match.\\ \tt - **Grid 3**: First column is all "X", but the second column is also "X", which does not match.\\ \tt \\ \tt Thus, Grid 1 matches the given expression perfectly.\\ \tt \\ \tt Answer: 1 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Invalid generated choice 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

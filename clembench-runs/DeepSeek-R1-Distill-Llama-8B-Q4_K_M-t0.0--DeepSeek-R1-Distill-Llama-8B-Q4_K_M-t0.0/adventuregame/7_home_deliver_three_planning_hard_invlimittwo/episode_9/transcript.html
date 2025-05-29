@@ -133,11 +133,11 @@ body {background-color: rgb(157, 152, 150);}
 
 <div class="chat">
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with &gt;. Write your plan for your next actions on the line below your action, starting with &quot;Next actions:&quot;.<br/>For example:<br/>&gt; open cupboard<br/>Next actions: take orange, eat orange<br/><br/>You can have up to two objects in your inventory at the same time.<br/><br/>Your goal for this game is: Put the apple in the cupboard, the book in the wardrobe and the broom in the freezer.<br/><br/>Once you have achieved your goal, write &quot;&gt; done&quot; to end the game.<br/><br/>You are in a pantry now. There are a refrigerator and a freezer. The refrigerator is closed. The freezer is closed. There is a passage to a kitchen here.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>&gt; open left freezer<br/><br/>Next actions: take broom, move broom to right freezer</p>
     </div>
 
@@ -173,11 +173,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>0.0</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>I don&#x27;t know what &#x27;left freezer&#x27; means.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>Ah, sorry! In text-based games like this, &quot;left&quot; and &quot;right&quot; refer to directions relative to your current location. Since you are in the **pantry**, &quot;left&quot; and &quot;right&quot; would be based on which side the passage to the kitchen is on.<br/><br/>So, if you&#x27;re standing in the pantry:<br/>- The passage to the kitchen might be either your left or right.<br/>- The refrigerator and freezer could also be positioned left and right of the passage (or one could be behind you).<br/><br/>Since I didn&#x27;t specify exactly where the freezers are located relative to the passage, you&#x27;ll need to decide which direction to go based on the context.<br/><br/>For simplicity, let&#x27;s assume:<br/>- You are facing the passage to the kitchen.<br/>- The freezers are positioned left and right of the passage.<br/><br/>If that&#x27;s the case, &quot;left freezer&quot; would mean the one to your **right** if you&#x27;re facing the passage, or the one on the **south side** (depending on how we define directions). But this can vary based on how you interpret it!<br/><br/>Let me try to clarify:<br/>&gt; open left freezer<br/><br/>This means you are choosing a specific direction (&quot;left&quot;) relative to your current location in the pantry. If &quot;left&quot; corresponds to one of the freezers, that action makes sense.<br/><br/>If you want to explore further:<br/>1. Open the left or right freezer.<br/>2. Take the broom from one of the freezers.<br/>3. Move the broom to another location (like the other freezer).<br/><br/>Let me know if you&#x27;d like me to clarify further!</p>
     </div>
 

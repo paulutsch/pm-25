@@ -133,11 +133,11 @@ body {background-color: rgb(157, 152, 150);}
 
 <div class="chat">
 
-    <div speaker="GM (Game Master) to Player 1 (MatchItPlayer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You are participating in a collaborative guessing game.<br/>The goal is to find out whether this grid and another picture only I can see, are the same.<br/>Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with &quot;DESCRIPTION:&quot; followed by the description. Do not add anything else. This is your grid:<br/>▢ ▢ X ▢ ▢<br/>▢ X X ▢ ▢<br/>X X X X X<br/>▢ X X ▢ ▢<br/>▢ ▢ X ▢ ▢</p>
     </div>
 
-    <div speaker="Player 1 (MatchItPlayer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>DESCRIPTION:<br/>The grid is a 5x5 arrangement with specific filled (X) cells. Each row and column has a particular pattern:<br/><br/>- **Row 1**: X in the third cell; others empty.<br/>- **Row 2**: X&#x27;s in second and third cells.<br/>- **Row 3**: All five cells are filled (X).<br/>- **Row 4**: Same as Row 2.<br/>- **Row 5**: Same as Row 1.<br/><br/>**Columns:**<br/>- Column 1: Only the middle row (Row 3) is filled.<br/>- Column 2: Filled in Rows 2, 3, and 4.<br/>- Column 3: All rows are filled.<br/>- Column 4 and 5: Only Row 3 is filled.<br/><br/>The grid exhibits vertical symmetry around Column 3 and reflectional symmetry along both horizontal and vertical axes. It also has full column and row filling in specific areas.<br/><br/>**Symmetry Check:**<br/>- **Vertical:** Each column mirrors its counterpart on the opposite side of Column 3.<br/>- **Horizontal:** Rows above and below mirror each other in filled cells.<br/><br/>To determine similarity, key points to verify:<br/>1. All of Row 3 is filled (X).<br/>2. Column 3 entirely filled.<br/>3. Presence of two adjacent X&#x27;s in Rows 2 and 4.<br/>4. Symmetry as described.<br/><br/>If these features match your grid, they are likely the same.</p>
     </div>
 
@@ -145,11 +145,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>continue</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 2 (MatchItPlayer)" class="msg gm-b" style="">
+    <div speaker="Game Master to Player 2" class="msg gm-b" style="">
         <p>You are participating in a collaborative guessing game.<br/>The goal is to find out whether this grid and another picture only I can see, are the same.<br/>Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with &quot;DESCRIPTION:&quot; followed by the description. Do not add anything else. This is your grid:<br/>X ▢ ▢ ▢ X<br/>X X ▢ X X<br/>X ▢ X ▢ X<br/>X ▢ ▢ ▢ X<br/>X ▢ ▢ ▢ X</p>
     </div>
 
-    <div speaker="Player 2 (MatchItPlayer) to GM (Game Master)" class="msg b-gm" style="">
+    <div speaker="Player 2 to Game Master" class="msg b-gm" style="">
         <p>The grid in question is a 5x5 arrangement where the first and last rows and columns are entirely filled with &#x27;X&#x27;s. The internal cells exhibit symmetry along both horizontal and vertical axes. Rows 1 and 5, as well as columns 1 and 5, are identical. This suggests that the grid has reflectional symmetry across both the horizontal and vertical midlines. Additionally, there is an &#x27;X&#x27; at the center position (3,3). The internal cells in rows 2 and 4 have &#x27;X&#x27;s, while most other positions contain &#x27;○&#x27;.<br/><br/>DESCRIPTION: The grid is a 5x5 square with all bordering cells marked &#x27;X&#x27;. It exhibits both horizontal and vertical symmetry, with symmetrical placement of &#x27;X&#x27; and &#x27;○&#x27; cells. The center cell is &#x27;X&#x27;, and there are additional internal &#x27;X&#x27;s in rows 2 and 4, creating a symmetrical pattern within the framework of bordering &#x27;X&#x27;s.</p>
     </div>
 

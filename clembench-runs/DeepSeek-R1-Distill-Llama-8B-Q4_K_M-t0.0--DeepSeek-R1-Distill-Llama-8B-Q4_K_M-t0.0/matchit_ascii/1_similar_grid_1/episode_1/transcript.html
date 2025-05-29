@@ -133,11 +133,11 @@ body {background-color: rgb(157, 152, 150);}
 
 <div class="chat">
 
-    <div speaker="GM (Game Master) to Player 1 (MatchItPlayer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You are participating in a collaborative guessing game.<br/>The goal is to find out whether this grid and another picture only I can see, are the same.<br/>Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with &quot;DESCRIPTION:&quot; followed by the description. Do not add anything else. This is your grid:<br/>X X X X X<br/>X X X X ▢<br/>X X X ▢ ▢<br/>X X ▢ ▢ ▢<br/>X ▢ ▢ ▢ ▢</p>
     </div>
 
-    <div speaker="Player 1 (MatchItPlayer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>To determine whether the two grids are the same, let&#x27;s analyze their structure based on your description.<br/><br/>**Grid Analysis:**<br/><br/>1. **Row 1:** X X X X X (5 X&#x27;s)<br/>2. **Row 2:** X X X X ▢ (4 X&#x27;s followed by 1 ▢)<br/>3. **Row 3:** X X X ▢ ▢ (3 X&#x27;s followed by 2 ▢&#x27;s)<br/>4. **Row 4:** X X ▢ ▢ ▢ (2 X&#x27;s followed by 3 ▢&#x27;s)<br/>5. **Row 5:** X ▢ ▢ ▢ ▢ (1 X followed by 4 ▢&#x27;s)<br/><br/>**Pattern Identification:**<br/>- Each row starts with one fewer X than the row above.<br/>- The number of ▢&#x27;s increases as we move down each row.<br/><br/>**Comparison Strategy:**<br/>- If the other grid follows this exact descending pattern in terms of X placement and ascending ▢ placement, then it matches.<br/>- To confirm, specific questions about individual cells (e.g., position (3,5), (4,3)) can be asked to check for consistency.<br/><br/>**Conclusion:**<br/>If both grids adhere to the same row-wise structure—each starting with decreasing X&#x27;s and ending with increasing ▢&#x27;s—they are identical. Otherwise, they differ.</p>
     </div>
 

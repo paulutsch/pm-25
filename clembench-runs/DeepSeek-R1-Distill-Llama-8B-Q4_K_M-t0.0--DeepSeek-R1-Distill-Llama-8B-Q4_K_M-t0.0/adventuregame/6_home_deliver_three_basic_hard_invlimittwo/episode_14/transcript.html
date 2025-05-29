@@ -133,11 +133,11 @@ body {background-color: rgb(157, 152, 150);}
 
 <div class="chat">
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with &gt;. Only reply with an action.<br/>For example:<br/>&gt; open cupboard<br/><br/>You can have up to two objects in your inventory at the same time.<br/><br/>Your goal for this game is: Put the broom on the shelf, the potted plant on the counter and the plate in the wardrobe.<br/><br/>Once you have achieved your goal, write &quot;&gt; done&quot; to end the game.<br/><br/>You are in a living room now. There are a chair, a side table, a couch and a book. The book is on the side table. There are passages to a hallway, a kitchen and a bedroom here.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>&gt; go hallway</p>
     </div>
 
@@ -153,11 +153,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You are in a hallway now. There is a potted plant. The potted plant is on the floor. There are passages to a broom closet and a living room here.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>&gt; pick up potted plant</p>
     </div>
 
@@ -173,11 +173,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You take the potted plant. In your inventory you have a potted plant.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>&gt; go broom closet</p>
     </div>
 
@@ -193,11 +193,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You are in a broom closet now. There are a mop and a broom. The mop is on the floor. The broom is on the floor. There is a passage to a hallway here.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>&gt; go kitchen</p>
     </div>
 
@@ -213,11 +213,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You can&#x27;t go to a kitchen from here.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>&gt; pick up broom</p>
     </div>
 
@@ -233,11 +233,11 @@ body {background-color: rgb(157, 152, 150);}
         <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
     </div>
 
-    <div speaker="GM (Game Master) to Player 1 (Adventurer)" class="msg gm-a" style="">
+    <div speaker="Game Master to Player 1" class="msg gm-a" style="">
         <p>You take the broom. In your inventory you have a potted plant and a broom.</p>
     </div>
 
-    <div speaker="Player 1 (Adventurer) to GM (Game Master)" class="msg a-gm" style="">
+    <div speaker="Player 1 to Game Master" class="msg a-gm" style="">
         <p>The goal is to place three items: the broom on the shelf, the potted plant on the counter, and the plate in the wardrobe.<br/><br/>**Step-by-Step Explanation:**<br/><br/>1. **Living Room:** Start here. Passages lead to hallway, kitchen, and bedroom.<br/><br/>2. **Hallway:** Go through the passage from living room. Here, pick up the potted plant.<br/><br/>3. **Broom Closet:** From the hallway, enter the broom closet. Pick up the broom.<br/><br/>4. **Kitchen:** After picking up the broom, proceed to the kitchen if necessary for further progress, but if not needed, continue towards the wardrobe.<br/><br/>5. **Wardrobe:** Once possible, go to the wardrobe and place the plate if found there.<br/><br/>6. **Shelf:** Return to the living room or another location where the shelf is accessible to place the broom on it.<br/><br/>7. **Counter:** Finally, ensure the potted plant is placed on the counter once all other tasks are completed.<br/><br/>**Final Action:**<br/><br/>Since I have both the potted plant and the broom in my inventory, my next logical step is to go to the wardrobe to place the plate if available there, then proceed to put the broom on the shelf. If the plate is not yet obtained, moving towards where it might be located, like the bedroom, may be necessary.<br/><br/>However, based on the current information, after picking up the broom, the next step should focus on placing it on the shelf and the potted plant on the counter once possible.<br/><br/>**&gt; go wardrobe**</p>
     </div>
 
