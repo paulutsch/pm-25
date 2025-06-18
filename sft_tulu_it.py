@@ -22,7 +22,7 @@ dataset = load_dataset(dataset_name, split="train")
 
 def format_example(example):
     prompt = example["prompt"]
-    completion = example["completion"]
+    completion = example["messages"][1]["content"]
     full_text = f"<|user|>\n{prompt}\n<|assistant|>\n{completion}"
     return tokenizer(
         full_text,
@@ -45,10 +45,10 @@ training_args = TrainingArguments(
     logging_steps=10,
     save_steps=1000,
     save_total_limit=2,
-    evaluation_strategy="no",  # for now, just train
+    #evaluation_strategy="no",  # for now, just train
     fp16=True,  # or bf16=True if supported
-    bf16=torch.cuda.is_bf16_supported(),
-    report_to="none",
+    #bf16=torch.cuda.is_bf16_supported(),
+    #report_to="none",
 )
 
 trainer = Trainer(
